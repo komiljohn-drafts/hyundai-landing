@@ -1,0 +1,54 @@
+.car_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  gap: 100px;
+  &__text {
+    flex-grow: 1;
+  }
+  .title {
+    color: rgba(1,44,95,1);
+    border-top: 2px solid #e3e3e3;
+    border-bottom: 2px solid #e3e3e3;
+    font-size: 28px;
+    padding: 8px 0;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .title ~ p {
+    line-height: 24px;
+    font-size: 18px;
+    color: rgba(1,44,95,1);
+  }
+}
+.complectation {
+  border: 1px solid rgb(27, 27, 27);
+  border-radius: 3px;
+  margin: 20px auto;
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid rgb(27, 27, 27);
+    cursor: pointer;
+    p {
+      padding: 8px 0;
+      margin: 0;
+      font-size: 24px;
+    }
+  }
+  .body {
+    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    p {
+      cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+    }
+  }
+}
