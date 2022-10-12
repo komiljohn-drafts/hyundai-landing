@@ -1,21 +1,21 @@
-import { useMemo, useState } from "react";
-import { useSearchParams } from "react-router-dom";
-import fakeData from "./fakeData";
-import "./style.scss";
+import { useMemo, useState } from "react"
+import { useSearchParams } from "react-router-dom"
+import fakeData from "./fakeData"
+import "./style.scss"
 
 const CarInfo = () => {
-  const [searchParams] = useSearchParams();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [searchParams] = useSearchParams()
+  const [isExpanded, setIsExpanded] = useState(false)
 
   const data = useMemo(
     () => fakeData.find((i) => i.key === searchParams.get("id")),
     [searchParams]
-  );
+  )
 
   return (
     <div className="container">
       <div className="car_info">
-        <img width={450} height={300} src={data.imgUrl} alt="car" />
+        <img width="100%" height={260} src={data.imgUrl} alt="car" />
         <div className="car_info__text">
           <p className="title">{data.title}</p>
           <p>Объем двигателя: {data.capacity}</p>
@@ -50,7 +50,7 @@ const CarInfo = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CarInfo;
+export default CarInfo

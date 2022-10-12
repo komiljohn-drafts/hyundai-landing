@@ -1,12 +1,7 @@
 .car_info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-  gap: 100px;
-  &__text {
-    flex-grow: 1;
-  }
+  flex-direction: column;
   .title {
     color: rgba(1, 44, 95, 1);
     border-top: 2px solid #e3e3e3;

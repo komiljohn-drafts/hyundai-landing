@@ -1,5 +1,5 @@
-import Input from "../../components/Input";
-import PrimaryButton from "../../components/PrimaryButton";
+import Input from "../../components/Input"
+import PrimaryButton from "../../components/PrimaryButton"
 
 const TestDrive = () => {
   return (
@@ -9,9 +9,12 @@ const TestDrive = () => {
       <Input label="Address" placeholder="Address" />
       <Input label="Номер телефона" placeholder="Номер телефона" />
       <Input label="Комментарии" placeholder="Комментарии" />
-      <PrimaryButton title="Отправить" style={{ marginTop: "8px" }} />
+      <PrimaryButton
+        title="Отправить"
+        style={{ marginTop: "8px", fontWeight: 300 }}
+      />
     </div>
-  );
-};
+  )
+}
 
-export default TestDrive;
+export default TestDrive

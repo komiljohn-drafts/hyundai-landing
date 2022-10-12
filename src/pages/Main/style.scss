@@ -20,7 +20,7 @@
     margin: 0 15px;
     border: 1px solid rgb(27, 27, 27);
     border-radius: 3px;
-    max-width: calc(80% - 30px);
+    max-width: calc(100% - 30px);
     margin: 20px auto;
     .head {
       display: flex;
@@ -41,9 +41,9 @@
       gap: 8px;
       p {
         cursor: pointer;
-          &:hover {
-            text-decoration: underline;
-          }
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -59,9 +59,8 @@
   }
   .btns {
     display: flex;
-    max-width: 80%;
+    justify-content: space-between;
     padding: 0 15px;
     margin: 20px auto;
-    gap: 16px;
   }
 }

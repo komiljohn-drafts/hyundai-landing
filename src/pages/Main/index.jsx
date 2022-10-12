@@ -1,24 +1,24 @@
-import { useState } from "react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import PrimaryButton from "../../components/PrimaryButton";
-import "./style.scss";
+import { useState } from "react"
+import { Outlet, useLocation, useNavigate } from "react-router-dom"
+import PrimaryButton from "../../components/PrimaryButton"
+import "./style.scss"
 
 const Main = () => {
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
-  const [isExpanded, setIsExpanded] = useState(false);
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+  const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <div className="wrapper">
       <div>
-        <div className="navbar">
+        <div className="navbar" onClick={() => navigate("/")}>
           <img
             width={60}
             height={40}
             src="https://freepngimg.com/thumb/hyundai/37678-1-hyundai-logo-transparent.png"
             alt="logo"
           />
-          <p onClick={() => navigate("/")}>Hyundai Auto Asia</p>
+          <p>Hyundai Auto Asia</p>
         </div>
         {!(pathname.length > 1) && (
           <div className="model">
@@ -54,16 +54,16 @@ const Main = () => {
           {pathname.length > 1 ? (
             <PrimaryButton
               style={{
-                fontWeight: pathname.includes("test_drive") ? 600 : 300
+                fontWeight: pathname.includes("test_drive") ? 600 : 300,
               }}
               onClick={() => navigate("/")}
-              title="Go back"
+              title="Назад"
             />
           ) : (
             <>
               <PrimaryButton
                 style={{
-                  fontWeight: pathname.includes("trade_in") ? 600 : 300
+                  fontWeight: pathname.includes("trade_in") ? 600 : 300,
                 }}
                 onClick={() => navigate("trade_in")}
                 title="Trade IN"
@@ -75,7 +75,7 @@ const Main = () => {
               />
               <PrimaryButton
                 style={{
-                  fontWeight: pathname.includes("test_drive") ? 600 : 300
+                  fontWeight: pathname.includes("test_drive") ? 600 : 300,
                 }}
                 onClick={() => navigate("test_drive")}
                 title="Test drive"
@@ -89,7 +89,7 @@ const Main = () => {
         <p>All rights reserved &copy; 2022</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Main;
+export default Main
