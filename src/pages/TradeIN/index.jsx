@@ -1,8 +1,8 @@
-import { useLocation } from "react-router-dom";
-import "./style.scss";
+import { useLocation } from "react-router-dom"
+import "./style.scss"
 
 const TradeIN = () => {
-  const { pathname } = useLocation();
+  const { pathname } = useLocation()
   return (
     <div className="container">
       <h2>Trade IN</h2>
@@ -11,8 +11,8 @@ const TradeIN = () => {
         height="100%"
         src={
           pathname.includes("stocks")
-            ? "https://cdn.knoema.com/infographics/Knoema_Data_Driven_Global_Automotive_Industry_Overview.png"
-            : "https://lh3.googleusercontent.com/2JAM45Pxd0lxdpVlueLCaWuslR7A6YCqcMgEBb7RDML6nmYVd9SGwG5GONO9WZE5Ucdo3NXEX2icowTHvkS8Pi8=w1280"
+            ? "/images/stock.png"
+            : "/images/trade-in.jpeg"
         }
         alt="cars"
       />
@@ -24,7 +24,7 @@ const TradeIN = () => {
       </p>
       <p>*Программа действительна для Ташкента.</p>
     </div>
-  );
-};
+  )
+}
 
-export default TradeIN;
+export default TradeIN
